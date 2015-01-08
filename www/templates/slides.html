@@ -1,0 +1,35 @@
+<ion-view view-title="Intro">
+
+    <div class="tabs tabs-top tabs-color-positive">
+        <a class= "tab-item" ng-class="{'tab-item-active':slideIndex==0}" ng-click="changeSlide(0)">
+            Slide1
+        </a>
+        <a class= "tab-item" ng-class="{'tab-item-active':slideIndex==1}" ng-click="changeSlide(1)">
+            Slide2
+        </a>
+        <a class= "tab-item" ng-class="{'tab-item-active':slideIndex==2}" ng-click="changeSlide(2)">
+            Slide3
+        </a>
+        <a class= "tab-item" ng-class="{'tab-item-active':slideIndex==3}" ng-click="changeSlide(3)">
+            Slide4
+        </a>
+    </div>
+
+    <ion-content>
+        <ion-slide-box on-slide-changed="slideChanged(index)" show-pager="false">
+            <ion-slide>
+                <ion-nav-view name="slide1-tab"></ion-nav-view>
+            </ion-slide>
+            <ion-slide>
+                <ion-nav-view name="slide2-tab"></ion-nav-view>
+            </ion-slide>
+            <ion-slide>
+                <ion-nav-view name="slide3-tab"></ion-nav-view>
+            </ion-slide>
+            <ion-slide>
+                <ion-nav-view name="slide4-tab"></ion-nav-view>
+            </ion-slide>
+        </ion-slide-box>
+    </ion-content>
+
+</ion-view>
